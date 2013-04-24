@@ -1,4 +1,3 @@
-
 <A name="toc1-3" title="CZMQ - High-level C binding for ØMQ" />
 # CZMQ - High-level C binding for ØMQ
 
@@ -1014,9 +1013,9 @@ These are the places a C application is subject to arbitrary system differences:
 An example of the last:
 
     #if (defined (__UNIX__))
-        pid = GetCurrentProcessId();
+        pid = getpid();
     #elif (defined (__WINDOWS__))
-        pid = getpid ();
+        pid = GetCurrentProcessId();
     #else
         pid = 0;
     #endif
